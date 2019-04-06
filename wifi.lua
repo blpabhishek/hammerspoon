@@ -1,5 +1,6 @@
 wifiWatcher = nil
-homeSSID = "HOLLYHOCKS-2"
+homeSSID = "Hollyhocks 1st_Floor"
+-- homeSSID = "twguest"
 lastSSID = hs.wifi.currentNetwork()
 
 function ssidChangedCallback()
@@ -8,9 +9,11 @@ function ssidChangedCallback()
     if newSSID == homeSSID and lastSSID ~= homeSSID then
         -- We just joined our home WiFi network
         hs.audiodevice.defaultOutputDevice():setVolume(70)
+        hs.notify.new({title="Hammerspoon", informativeText="Connected to Home WIFI"}):send()
     elseif newSSID ~= homeSSID and lastSSID == homeSSID then
         -- We just departed our home WiFi network
         hs.audiodevice.defaultOutputDevice():setVolume(10)
+        hs.notify.new({title="Hammerspoon", informativeText="Connected to Public WIFI"}):send()
     end
 
     lastSSID = newSSID

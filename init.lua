@@ -1,5 +1,6 @@
 require "screen"
 require "wifi"
+require "reload"
 
 -- Load Caffeine
 
@@ -13,7 +14,6 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "d", function()
 end)
 
 -- Clipboard shortcut
-
 hs.loadSpoon("ClipboardTool")
 spoon.ClipboardTool:start()
 spoon.ClipboardTool:bindHotkeys({
@@ -21,7 +21,10 @@ spoon.ClipboardTool:bindHotkeys({
 })
 
 -- Reload Hamerspoon 
+-- Automattic Watcher
+luaFileWatcher = hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConfig):start()
+ -- Mannual Reload
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "R", function()
   hs.reload()
 end)
-hs.notify.new({title="Hammerspoon", informativeText="Config Reloaded"}):send()
+--hs.notify.new({title="Hamerspoon", informativeText="Reloaded abhishek"}):send()
