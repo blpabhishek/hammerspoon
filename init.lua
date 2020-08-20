@@ -1,6 +1,7 @@
 require "screen"
 require "wifi"
 require "reload"
+require "volumeControl"
 
 -- Load Caffeine
 
@@ -27,4 +28,3 @@ luaFileWatcher = hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloa
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "R", function()
   hs.reload()
 end)
---hs.notify.new({title="Hamerspoon", informativeText="Reloaded abhishek"}):send()

@@ -1,7 +1,5 @@
 wifiWatcher = nil
-homeSSID = "Hollyhocks 1st_Floor"
--- homeSSID = "twguest"
-lastSSID = hs.wifi.currentNetwork()
+homeSSID = "D-Link_DIR-816_5G"
 
 function ssidChangedCallback()
     newSSID = hs.wifi.currentNetwork()
