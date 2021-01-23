@@ -1,7 +1,7 @@
 require "screen"
 require "wifi"
 require "reload"
-require "volumeControl"
+require "hotControl"
 
 -- Load Caffeine
 
