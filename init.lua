@@ -21,6 +21,10 @@ spoon.ClipboardTool:bindHotkeys({
   toggle_clipboard = { { "ctrl","shift" }, "v" }
 })
 
+hs.loadSpoon("SpeedMenu")
+spoon.SpeedMenu:rescan()
+spoon.SpeedMenu:start()
+
 -- Reload Hamerspoon 
 -- Automattic Watcher
 luaFileWatcher = hs.pathwatcher.new(os.getenv("HOME") .. "/.hammerspoon/", reloadConfig):start()

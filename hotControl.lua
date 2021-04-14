@@ -9,18 +9,18 @@ function increaseBrightnessBy(level)
   hs.alert(hs.brightness.get(), {atScreenEdge = 2})
 end
 
-hs.hotkey.bind({"cmd","alt" ,"ctrl"}, "down", function()
+hs.hotkey.bind({"cmd","alt" ,"shift"}, "down", function()
   increaseAudioBy(-10)
 end)
 
-hs.hotkey.bind({"cmd","alt", "ctrl"}, "up", function()
+hs.hotkey.bind({"cmd","alt", "shift"}, "up", function()
   increaseAudioBy(10)
 end)
 
-hs.hotkey.bind({"cmd","alt", "ctrl"}, "left", function()
+hs.hotkey.bind({"cmd","alt", "shift"}, "left", function()
    increaseBrightnessBy(-8)
 end)
 
-hs.hotkey.bind({"cmd","alt", "ctrl"}, "right", function()
+hs.hotkey.bind({"cmd","alt", "shift"}, "right", function()
    increaseBrightnessBy(8)
 end)
